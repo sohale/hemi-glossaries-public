@@ -98,7 +98,11 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
   *  versioned: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-v<%- version %>/<%- bin %>-v<%- version %>-<%- platform %>-<%- arch %><%- ext %>"`
   *  manifest: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- platform %>-<%- arch %>"`
 
-
+##### Individuaaal templates:
+* baseDir -- see baseDir
+*  manifest -- see manifest
+*  versioned ?
+*  unversioned ?
 #### target template
 #### vanilla template
 #### target
