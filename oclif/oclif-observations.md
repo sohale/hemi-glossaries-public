@@ -30,6 +30,16 @@ Which places can contain manifest?
 ### scoped Vars
 * How to set scoped vars?
 * What are some scoped vars?
+  * `FLASH_UPDATE_INSTRUCTIONS` -- Used at onset of update. ...
+
+  * `FLASH_CACHE_DIR`
+  * `FLASH_CONFIG_DIR`
+  * `FLASH_DATA_DIR`
+  * `FLASH_BINPATH`
+  * `FLASH_NPM_REGISTRY`
+  * `FLASH_S3_BUCKET`
+  * `FLASH_OCLIF_CLIENT_HOME`
+  * `FLASH_UPDATE_INSTRUCTIONS`
 
 ### Other minor concepts
 #### channel
