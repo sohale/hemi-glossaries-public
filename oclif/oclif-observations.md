@@ -78,3 +78,7 @@ The `config` & The `pjson`
 #### The `baseDir`
 * `baseDir` aka `basename`
 * Used during extraction.
+
+#### s3Key
+The `this.config.s3Key()` provides importanat key ids where info is taken fromm `this`, and customised (from manifest, etc)
+* `.s3Key('baseDir')` provides the baseDir.  Is overriden by `manifest`.baseDir (from fetched manifest file)
