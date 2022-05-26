@@ -32,6 +32,8 @@ Which places can contain manifest?
 ### Other minor concepts
 #### channel
 `this.channel`. Usually = `stable`
+#### tidy
+what does it do? `this.tidy();`
 
 ### Internal configs
 The `config` & The `pjson`
