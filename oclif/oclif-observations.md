@@ -29,6 +29,10 @@ Which places can contain manifest?
 * How to set scoped vars?
 * What are some scoped vars?
 
+### Other minor concepts
+#### channel
+`this.channel`. Usually = `stable`
+
 ### Internal configs
 The `config` & The `pjson`
 * The config fields
