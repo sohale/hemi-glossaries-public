@@ -13,6 +13,8 @@ There are three types of plugins
 ### Hook
 What is a hook?
 
+`@oclif/plugin-plugins/lib/hooks/update.js` is outside the update plugin.
+
 ### Manifest
 Which places can contain manifest?
 
