@@ -81,4 +81,5 @@ The `config` & The `pjson`
 
 #### s3Key
 The `this.config.s3Key()` provides importanat key ids where info is taken fromm `this`, and customised (from manifest, etc)
-* `.s3Key('baseDir')` provides the baseDir.  Is overriden by `manifest`.baseDir (from fetched manifest file)
+* `.s3Key('baseDir')` provides the baseDir.  Is overriden by `manifest`.baseDir (directly ready as a field from fetched manifest file).
+If not in manifest file, it is reconstructed form other fields of manifest such as: (`.version`, `.channel`) (and bin(why?)platform,arch).
