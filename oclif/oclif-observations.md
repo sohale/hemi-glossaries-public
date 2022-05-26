@@ -61,6 +61,7 @@ The `config` & The `pjson`
 
 ### client dir
 * The clientDir or `clientRoot` is `~/.local/share/flash/client`.
+* It is cleaned (wiped) before an update. (by `ensureClientDir()`)
 
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
