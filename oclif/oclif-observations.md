@@ -74,3 +74,6 @@ The `config` & The `pjson`
 #### The createBin
 `this.createBin(version);` does what?
 `version` is the update-to (read from manifest)
+
+#### The `baseDir`
+Used during extraction.
