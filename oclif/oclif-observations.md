@@ -59,6 +59,9 @@ The `config` & The `pjson`
 * The `.local/share` is used for what?
    * `~/.local/share/flash/client/6.0.7` is the output of update fter downloading.
 
+### client dir
+* The clientDir or `clientRoot` is `~/.local/share/flash/client`.
+
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
 * Strems can be `pause()`ed or `stream.resume()`ed from downstream. (downstrem controls the dataflow)
