@@ -90,4 +90,9 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 #### Templates
 * Templtes is a set of templates (strings)
 * Can be customised in package.json: ...`.s3.templates`
+* Two sets of templtes exist: `target` and `vanilla`.
 * The default tempaltes are the following:
+
+#### target template
+#### vanilla template
+#### target
