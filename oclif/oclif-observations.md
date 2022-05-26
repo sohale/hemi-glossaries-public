@@ -46,6 +46,8 @@ What is a hook?
    * `autoupdatelogfile` -- do we have such thing?
    * `clientRoot` -- (See below)
    * `autoupdateEnv` no idea.
+   * `clientDir` -- ... (bsed no `clientRoot` and current version = config.version )
+   * 
 ### Manifest
 Which places can contain manifest?
 
@@ -141,5 +143,5 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 
 ### Is update needed?
 is cheches in maany places:
-* The plugin-update / init hook: -- `autoupdateNeeded()`
+* The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
