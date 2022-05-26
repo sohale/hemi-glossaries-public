@@ -15,6 +15,10 @@ What is a hook?
 * Definition of Hook in [sfcli: hooks](https://developer.salesforce.com/docs/atlas.en-us.228.0.sfdx_cli_plugins.meta/sfdx_cli_plugins/cli_plugins_customize_hooks.htm)
 * [oclif hooks](https://oclif.io/docs/hooks)
 
+* Two types of hooks:  Lifecycle hooks & Custom hooks
+* Two types of hooks:  Lifecycle events & Custom events
+* Custom Events need to be called explicitly using `this.config.runHook()`
+* Lifecycle Events: `init`, `prerun`, `postrun`, `command_not_found`.
 `@oclif/plugin-plugins/lib/hooks/update.js` is outside the update plugin.
 
 ### Manifest
