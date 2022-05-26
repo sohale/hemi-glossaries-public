@@ -62,4 +62,6 @@ The `config` & The `pjson`
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
 * Strems can be `pause()`ed or `stream.resume()`ed from downstream. (downstrem controls the dataflow)
-* Streams can be resirected to `extract()`.
+* Streams can be redirected to `extract()`.
+* You cana awaait the downstream thaaat you attached (eg the `extract`).
+* 
