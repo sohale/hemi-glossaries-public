@@ -64,4 +64,8 @@ The `config` & The `pjson`
 * Strems can be `pause()`ed or `stream.resume()`ed from downstream. (downstrem controls the dataflow)
 * Streams can be redirected to `extract()`.
 * You cana awaait the downstream thaaat you attached (eg the `extract`).
-* 
+
+
+#### The createBin
+`this.createBin(version);` does what?
+`version` is the update-to (read from manifest)
