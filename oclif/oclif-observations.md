@@ -51,5 +51,6 @@ what does it do? `this.tidy();`
 The `config` & The `pjson`
 * The config fields
   * `config.binPath` -- If undefined, it does skipUpdate => `'not updatable'`. How is it set?
+  * `this.config.version` Updating CLI from `this.config.version` to `manifest.(version, channel)`
 
 * The `pjson` fields
