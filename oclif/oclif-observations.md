@@ -137,3 +137,9 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 #### target template
 #### vanilla template
 #### target
+
+
+### Is update needed?
+is cheches in maany places:
+* The plugin-update / init hook: -- `autoupdateNeeded()`
+* ...
