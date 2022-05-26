@@ -1,9 +1,21 @@
 # Observations on how `oclif` works
+Including OCLIF internls
 
 https://github.com/oclif/oclif
 
-## plugins
+## Main concepts:
+### plugins
 There are three types of plugins
 * UserPlugins
 * DevPlugins
 * CorePlugins
+
+### Hook
+What is a hook?
+
+### Internal configs
+The `config` & The `pjson`
+* The config fields
+  * `config.binPath`
+
+* The `pjson` fields
