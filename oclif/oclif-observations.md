@@ -17,9 +17,10 @@ What is a hook?
 
 * Two types of hooks:  Lifecycle hooks & Custom hooks
 * Two types of hooks:  Lifecycle events & Custom events
-* Custom Events need to be called explicitly using `this.config.runHook()`
 * Lifecycle Events: `init`, `prerun`, `postrun`, `command_not_found`.
 `@oclif/plugin-plugins/lib/hooks/update.js` is outside the update plugin.
+* Custom Events need to be called explicitly using `this.config.runHook()`
+* Lifecycle Events: are called implicitly/automatically (?).
 
 ### Manifest
 Which places can contain manifest?
