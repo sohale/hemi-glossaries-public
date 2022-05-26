@@ -101,7 +101,7 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 ##### Individuaaal templates:
 * baseDir -- see baseDir
 *  manifest -- see manifest
-*  versioned ?
+*  versioned -- is the URL for the updated tarball. Bypassed by manifest's `.gz` field.
 *  unversioned ?
 #### target template
 #### vanilla template
