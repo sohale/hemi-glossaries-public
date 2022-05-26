@@ -13,6 +13,7 @@ There are three types of plugins
 ### Hook
 What is a hook?
 * Definition of Hook in [sfcli: hooks](https://developer.salesforce.com/docs/atlas.en-us.228.0.sfdx_cli_plugins.meta/sfdx_cli_plugins/cli_plugins_customize_hooks.htm)
+* [oclif hooks](https://oclif.io/docs/hooks)
 
 `@oclif/plugin-plugins/lib/hooks/update.js` is outside the update plugin.
 
