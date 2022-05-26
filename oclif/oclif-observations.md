@@ -76,4 +76,5 @@ The `config` & The `pjson`
 `version` is the update-to (read from manifest)
 
 #### The `baseDir`
-Used during extraction.
+* `baseDir` aka `basename`
+* Used during extraction.
