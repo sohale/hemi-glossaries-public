@@ -19,6 +19,9 @@ Which places can contain manifest?
 Where is manifest file (is supposed to be) read from: ?
 Wher does funtion `fetchManifest()` read from?
 
+### scoped Vars
+* How to set scoped vars?
+* What are some scoped vars?
 
 ### Internal configs
 The `config` & The `pjson`
