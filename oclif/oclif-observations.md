@@ -21,6 +21,14 @@ What is a hook?
 `@oclif/plugin-plugins/lib/hooks/update.js` is outside the update plugin.
 * Custom Events need to be called explicitly using `this.config.runHook()`
 * Lifecycle Events: are called implicitly/automatically (?).
+* Order of execution:
+  1. `init`
+  2. Find the command (means?). (If not found, go to step 7) After command was found:
+  3. `prerun`
+  4. run(): the main command is run
+  5. `postrun`
+  6. done.
+  7. if command not found: `command_not_found`
 
 ### Manifest
 Which places can contain manifest?
