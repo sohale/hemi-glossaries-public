@@ -10,6 +10,13 @@ There are three types of plugins
 * DevPlugins
 * CorePlugins
 
+### hook-cmmand-?
+* Hooks, commands, plugins
+* Each command is like a plugin.
+* Each plugin is like a commmand.
+* Each plugin (command?) has a set of hooks
+* Each command has a set of hooks
+
 ### Hook
 What is a hook?
 * Definition of Hook in [sfcli: hooks](https://developer.salesforce.com/docs/atlas.en-us.228.0.sfdx_cli_plugins.meta/sfdx_cli_plugins/cli_plugins_customize_hooks.htm)
@@ -31,6 +38,14 @@ What is a hook?
   6. done.
   7. if command not found: `command_not_found`
 
+### init hook
+* The `init` hook kof the `update` plugin,  Sets important config/values:
+   * `binPath` -- ? `this.config.binPath || this.config.bin;`
+   * `lastrunfile` filename
+   * `autoupdatefile`
+   * `autoupdatelogfile` -- do we have such thing?
+   * `clientRoot` -- (See below)
+   * `autoupdateEnv` no idea.
 ### Manifest
 Which places can contain manifest?
 
