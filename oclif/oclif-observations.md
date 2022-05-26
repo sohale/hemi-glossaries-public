@@ -54,3 +54,7 @@ The `config` & The `pjson`
   * `this.config.version` Updating CLI from `this.config.version` to `manifest.(version, channel)`
 
 * The `pjson` fields
+
+### local cache
+* The `.local/share` is used for what?
+   * `~/.local/share/flash/client/6.0.7` is the output of update fter downloading.
