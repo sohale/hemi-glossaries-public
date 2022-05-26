@@ -62,13 +62,13 @@ The `config` & The `pjson`
 ### client dir
 * The clientDir or `clientRoot` is `~/.local/share/flash/client`.
 * It is cleaned (wiped) before an update. (by `ensureClientDir()`)
-* Output of the extraction stream is `.clientRoot`/`maifest.version`
+* Output of the extraction stream is `.clientRoot`/`maifest.version` for example `~/.local/share/flash/client/6.0.7`
 
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
 * Strems can be `pause()`ed or `stream.resume()`ed from downstream. (downstrem controls the dataflow)
 * Streams can be redirected to `extract()`.
-* You cana awaait the downstream thaaat you attached (eg the `extract`).
+* You can `await` the downstream that you attached (eg the `extract`).
 
 
 #### The createBin
