@@ -13,6 +13,13 @@ There are three types of plugins
 ### Hook
 What is a hook?
 
+### Manifest
+Which places can contain manifest?
+
+Where is manifest file (is supposed to be) read from: ?
+Wher does funtion `fetchManifest()` read from?
+
+
 ### Internal configs
 The `config` & The `pjson`
 * The config fields
