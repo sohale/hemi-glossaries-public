@@ -93,6 +93,12 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 * Two sets of templtes exist: `target` and `vanilla`.
 * The default tempaltes are the following:
 
+  *  baseDir: `'<%- bin %>'`
+  *  unversioned: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-<%- platform %>-<%- arch %><%- ext %>"`
+  *  versioned: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-v<%- version %>/<%- bin %>-v<%- version %>-<%- platform %>-<%- arch %><%- ext %>"`
+  *  manifest: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- platform %>-<%- arch %>"`
+
+
 #### target template
 #### vanilla template
 #### target
