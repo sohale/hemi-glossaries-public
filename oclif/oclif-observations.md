@@ -16,8 +16,12 @@ What is a hook?
 ### Manifest
 Which places can contain manifest?
 
-Where is manifest file (is supposed to be) read from: ?
-Wher does funtion `fetchManifest()` read from?
+* Where is manifest file (is supposed to be) read from: ?
+* Where does function `fetchManifest()` read from? s3url!
+
+* Where manifest is used? (fetched)
+  * check update (or skip)
+  * actual update
 
 [Invariance]: this.config.version === manifest.version
 
