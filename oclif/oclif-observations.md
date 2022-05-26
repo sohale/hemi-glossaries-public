@@ -16,6 +16,6 @@ What is a hook?
 ### Internal configs
 The `config` & The `pjson`
 * The config fields
-  * `config.binPath`
+  * `config.binPath` -- If undefined, it does skipUpdate. How is it set?
 
 * The `pjson` fields
