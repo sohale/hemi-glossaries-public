@@ -189,13 +189,19 @@ The reexec, spawns the `xxxxx update` after the bash script is created (using `c
 #### vanilla template
 #### target
 
+## Update
+1. Preparing files for installer
+2. Prepared files for uploading into updater
+3. Check if update is available (`warn-if-update-available`)
+4. Update command (default: channel=`stable`)
+5. Update command from a specific channel
 
 ### Is update needed?
 is checks in many places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
 
-## Requirements for update
+### Requirements for update
 * In `package.json` (use jq)
 ```
        .version = "6.0.7"
@@ -212,6 +218,8 @@ is checks in many places:
       gz: "http://127.0.0.1:3000/upd/xxxxx-v${VERSION_UPDATE_TO}/xxxxx-v${VERSION_UPDATE_TO}-darwin-x64.tar.gz"
       baseDir: "xxxxx"
       sha256gz: "$(cat ....tar.gz | openssl dgst -sha256)"
+      
+      "channel": "stable"        /* must have */
 }
 ```
 * Manifest file to be served in the URL specified by `package.json` `.oclif.update.s3.host` (?). e.g. `http://127.0.0.1:3000/upd/darwin-x64`
