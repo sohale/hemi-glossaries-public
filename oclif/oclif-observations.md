@@ -208,4 +208,34 @@ is cheches in maany places:
 ### File structure created by oclif-dev
 The clif-dev itself is at: `"node_modules/@oclif/dev-cli/bin/run`
 
+Creates 
+* `./tmp`
+* `./dist`
+#### In `tmp`:
+   * `xxxxx-v6.0.7` -- a folder
+   * `tmp/xxxxx/oclif.manifest.json` -- a manifest file:
+#### In `dist`:
+```text
+├── xxxxx-v6.0.7
+│   ├── xxxxx-v6.0.7-darwin-x64.tar.gz
+│   ├── xxxxx-v6.0.7-linux-arm.tar.gz
+│   ├── xxxxx-v6.0.7-linux-x64.tar.gz
+│   ├── xxxxx-v6.0.7-win32-x64.tar.gz
+│   ├── xxxxx-v6.0.7-win32-x86.tar.gz
+│   └── xxxxx-v6.0.7.tar.gz
+├── darwin-x64
+├── linux-arm
+├── linux-x64
+├── version
+├── win32-x64
+└── win32-x86
+```
+#### Target suffixes:
+* `-darwin-x64.tar.gz`
+* `-linux-arm.tar.gz`
+* `-linux-x64.tar.gz`
+* `-win32-x64.tar.gz`
+* `-win32-x86.tar.gz`
+* `.tar.gz`  -- for node
+
 ### File structure created by installer (linux)
