@@ -178,6 +178,32 @@ is cheches in maany places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
 
+## Requirements for update
+* In `package.json`
+```
+       .version = \"$FLVER\"
+       |
+       .oclif.npmRegistry = \"http://127.0.0.1:3000/oclifRegistry\"
+       |
+       .oclif.update.s3.host = \"http://127.0.0.1:3000/upd\"
+       |
+       .oclif[\"warn-if-update-available\"].timeoutInDays = -1
+       |
+       .oclif[\"warn-if-update-available\"].registry = \"http://127.0.0.1:3000/wiua\"
+       |
+       .engines.node = \">=8.16.0\"
+```
+* A manifest file, usually called `darwin-x64`:
+```
+{
+      version: "${VERSION_UPDATE_TO}"
+      gz: "http://127.0.0.1:8080/public/xxxxx-v${VERSION_UPDATE_TO}/flash-v${VERSION_UPDATE_TO}-darwin-x64.tar.gz"
+      baseDir: "xxxxx"
+      sha256gz: "$(cat ....tar.gz | openssl dgst -sha256)"
+}
+```
 ## File structure
 ### File structure created by oclif-dev
+The clif-dev itself is at: `"node_modules/@oclif/dev-cli/bin/run`
+
 ### File structure created by installer (linux)
