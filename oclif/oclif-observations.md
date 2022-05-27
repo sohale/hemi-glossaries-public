@@ -202,6 +202,8 @@ is cheches in maany places:
       sha256gz: "$(cat ....tar.gz | openssl dgst -sha256)"
 }
 ```
+* Manifest file to be served in the URL specified by `package.json` `.oclif.update.s3.host` (?). e.g. `http://127.0.0.1:3000/upd/darwin-x64`
+
 ## File structure
 ### File structure created by oclif-dev
 The clif-dev itself is at: `"node_modules/@oclif/dev-cli/bin/run`
