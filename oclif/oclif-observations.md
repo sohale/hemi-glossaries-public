@@ -127,7 +127,7 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 * s3Key(key) uses the template from the given key: templates[key].
 
 #### Templates
-See [Templates]
+See [Templates](#templates-1)
 ## Templates
 * Templtes is a set of templates (strings)
 * Can be customised in package.json: ...`.s3.templates`
