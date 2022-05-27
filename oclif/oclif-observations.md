@@ -216,14 +216,7 @@ Creates
 * `tmp/xxxxx/oclif.manifest.json` -- a manifest file:
 
 ```text
-├── cache
-│   │
-│   ├── 12.22.12 / SHASUMS256.txt.asc
-│   ├── node-v12.22.12-darwin-x64
-│   ├── node-v12.22.12-linux-armv7l
-│   ├── node-v12.22.12-linux-x64
-│   ├── node-v12.22.12-win32-x64.exe
-│   └── node-v12.22.12-win32-x86.exe
+tmp
 ├── xxxxx
 │   ├── oclif.manifest.json
 │   ├── package-lock.json
@@ -234,18 +227,27 @@ Creates
 ├── linux-x64 /xxxxx ...
 ├── win32-x64 /xxxxx / ...
 ├── win32-x86 /xxxxx / ...
+│
+│
+├── cache
+│   ├── 12.22.12 / SHASUMS256.txt.asc
+│   ├── node-v12.22.12-darwin-x64
+│   ├── node-v12.22.12-linux-armv7l
+│   ├── node-v12.22.12-linux-x64
+│   ├── node-v12.22.12-win32-x64.exe
+│   └── node-v12.22.12-win32-x86.exe
 ├── node
-│   ├── node-v12.22.12-darwin-x64 / ...
-│   ├── node-v12.22.12-linux-armv7l / ...
-│   ├── node-v12.22.12-linux-x64 / ...
-│   ├── node-v12.22.12-win-x64 / ...
-│   ├── node-v12.22.12-win-x86 / ....
+│   ├── node-v12.22.12-darwin-x64 / ... (node, npm, npx)
+│   ├── node-v12.22.12-linux-armv7l / ... (node, npm, npx)
+│   ├── node-v12.22.12-linux-x64 / ... (node, npm, npx)
+│   ├── node-v12.22.12-win-x64 / ... (node, npm, npx)
+│   ├── node-v12.22.12-win-x86 / .... (node, npm, npx)
 │   ├── node-v12.22.12-darwin-x64.tar.xz
 │   ├── node-v12.22.12-linux-armv7l.tar.xz
 │   ├── node-v12.22.12-linux-x64.tar.xz
 │   ├── node-v12.22.12-win-x64.7z
 │   └── node-v12.22.12-win-x86.7z
-└─
+└─.
 ```
 * 12.22.12 is the node version
 * v6.0.7 is your xxxxx applcation version
@@ -254,6 +256,7 @@ Creates
 #### In `dist`
 Manifest files in its root and `.tar.gz` files in a folder:
 ```text
+dist
 ├── xxxxx-v6.0.7
 │   ├── xxxxx-v6.0.7-darwin-x64.tar.gz
 │   ├── xxxxx-v6.0.7-linux-arm.tar.gz
