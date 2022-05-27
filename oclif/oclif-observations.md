@@ -12,12 +12,14 @@ There are three types of plugins
 * DevPlugins
 * CorePlugins
 
-### hook-cmmand-?
+### hooks, command, plugins
 * Hooks, commands, plugins
 * Each command is like a plugin.
 * Each plugin is like a commmand.
 * Each plugin (command?) has a set of hooks
 * Each command has a set of hooks
+
+* The structure of a plugin is very similar to the structure of commands: both have `run()`. [See](https://github.com/oclif/plugin-update/tree/main/src).
 
 ### Hook
 What is a hook?
@@ -39,8 +41,6 @@ What is a hook?
   5. `postrun`
   6. done.
   7. if command not found: `command_not_found`
-
-* The structure of a plugin is very similar to the structure of commands: both have `run()`. [See](https://github.com/oclif/plugin-update/tree/main/src).
 
 ### init hook
 * The `init` hook kof the `update` plugin,  Sets important config/values:
