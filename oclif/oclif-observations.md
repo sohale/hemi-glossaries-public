@@ -212,8 +212,45 @@ Creates
 * `./tmp`
 * `./dist`
 #### In `tmp`
-   * `xxxxx-v6.0.7` -- a folder
-   * `tmp/xxxxx/oclif.manifest.json` -- a manifest file:
+* `xxxxx-v6.0.7` -- a folder
+* `tmp/xxxxx/oclif.manifest.json` -- a manifest file:
+
+```text
+├── cache
+│   │
+│   ├── 12.22.12 / SHASUMS256.txt.asc
+│   ├── node-v12.22.12-darwin-x64
+│   ├── node-v12.22.12-linux-armv7l
+│   ├── node-v12.22.12-linux-x64
+│   ├── node-v12.22.12-win32-x64.exe
+│   └── node-v12.22.12-win32-x86.exe
+├── xxxxx
+│   ├── oclif.manifest.json
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src  ...
+├── darwin-x64 /xxxxx /...
+├── linux-arm /xxxxx /...
+├── linux-x64 /xxxxx ...
+├── win32-x64 /xxxxx / ...
+├── win32-x86 /xxxxx / ...
+├── node
+│   ├── node-v12.22.12-darwin-x64 / ...
+│   ├── node-v12.22.12-linux-armv7l / ...
+│   ├── node-v12.22.12-linux-x64 / ...
+│   ├── node-v12.22.12-win-x64 / ...
+│   ├── node-v12.22.12-win-x86 / ....
+│   ├── node-v12.22.12-darwin-x64.tar.xz
+│   ├── node-v12.22.12-linux-armv7l.tar.xz
+│   ├── node-v12.22.12-linux-x64.tar.xz
+│   ├── node-v12.22.12-win-x64.7z
+│   └── node-v12.22.12-win-x86.7z
+└─
+```
+* 12.22.12 is the node version
+* v6.0.7 is your xxxxx applcation version
+* As of olcif version `"@oclif/dev-cli": "^1.22.2"`, `"@oclif/command": "^1.5.19"`, `"@oclif/plugin-update": "1.3.9"`.
+* The file `oclif.manifest.json` (in the root) is ?
 #### In `dist`
 Manifest files in its root and `.tar.gz` files in a folder:
 ```text
