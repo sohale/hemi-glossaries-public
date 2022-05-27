@@ -115,15 +115,22 @@ The `config` & The `pjson`
 Should be set in env variable `XXXXX_UPDATE_INSTRUCTIONS`.
 
 ### more minor
-#### createBin
+#### createBin and the bash script
 `this.createBin(version);` does what?
 `version` is the update-to (read from manifest)
 
 The createBin creates a bash file for the new version (updated).
-The reason for bash script is to set env varibles so tht it can run sa reexec.
+The reason for bash script is to set env varibles so tht it can run as `reexec`.
+also (needs confirmation).
 (Why reexec reinstalls?)
-That includes `XXXXX_BINPATH`, etc.
+The envs includes `XXXXX_BINPATH`, etc.
 where `XXXXX` is the name of your command.
+
+* `XXXXX_BINPATH`
+* `XXXXX_REDIRECTED`
+
+* The bash file is usually in `~/.local/share/xxxxx/client/bin/xxxxx` (.clientBin)
+* `~/.local/share/xxxxx/client/current` (.clientRoot + '/current')
 
 #### Bash script
 See [The createBin](#createBin)
