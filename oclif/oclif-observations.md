@@ -127,6 +127,8 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 * s3Key(key) uses the template from the given key: templates[key].
 
 #### Templates
+See [Templates]
+## Templates
 * Templtes is a set of templates (strings)
 * Can be customised in package.json: ...`.s3.templates`
 * Two sets of templtes exist: `target` and `vanilla`.
@@ -138,10 +140,10 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
   *  manifest: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- platform %>-<%- arch %>"`
 
 ##### Individual templates:
-* baseDir -- see baseDir
-*  manifest -- see manifest
-*  versioned -- is the URL for the updated tarball. Bypassed by manifest's `.gz` field.
-*  unversioned ?
+* `baseDir`: -- see baseDir
+*  `manifest`: -- see manifest
+*  `versioned`: -- is the URL for the updated tarball. Bypassed by manifest's `.gz` field.
+*  `unversioned`: ?
 #### target template
 #### vanilla template
 #### target
@@ -151,3 +153,4 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
 is cheches in maany places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
+
