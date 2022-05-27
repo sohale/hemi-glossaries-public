@@ -211,10 +211,11 @@ The clif-dev itself is at: `"node_modules/@oclif/dev-cli/bin/run`
 Creates 
 * `./tmp`
 * `./dist`
-#### In `tmp`:
+#### In `tmp`
    * `xxxxx-v6.0.7` -- a folder
    * `tmp/xxxxx/oclif.manifest.json` -- a manifest file:
-#### In `dist`:
+#### In `dist`
+Manifest files in its root and `.tar.gz` files in a folder:
 ```text
 ├── xxxxx-v6.0.7
 │   ├── xxxxx-v6.0.7-darwin-x64.tar.gz
