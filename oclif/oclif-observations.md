@@ -178,3 +178,6 @@ is cheches in maany places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
 
+## File structure
+### File structure created by oclif-dev
+### File structure created by installer (linux)
