@@ -38,6 +38,8 @@ What is a hook?
   6. done.
   7. if command not found: `command_not_found`
 
+* The structure of a plugin is very similar to the structure of commands: both have `run()`. [See](https://github.com/oclif/plugin-update/tree/main/src).
+
 ### init hook
 * The `init` hook kof the `update` plugin,  Sets important config/values:
    * `binPath` -- ? `this.config.binPath || this.config.bin;`
@@ -77,8 +79,12 @@ Which places can contain manifest?
 ### Other minor concepts
 #### channel
 `this.channel`. Usually = `stable`
-#### tidy
+#### tidy, touch
 what does it do? `this.tidy();`
+
+* `tidy` and `touch` are relted tools.
+* `.tidy()` removes files older than a certain time.
+* `.touch()` updates the timestamp of the file, so that it is not deleted in the next `tidy()`
 
 ### Internal configs
 The `config` & The `pjson`
@@ -131,7 +137,7 @@ If not in manifest file, it is reconstructed form other fields of manifest such 
   *  versioned: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-v<%- version %>/<%- bin %>-v<%- version %>-<%- platform %>-<%- arch %><%- ext %>"`
   *  manifest: `"<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- platform %>-<%- arch %>"`
 
-##### Individuaaal templates:
+##### Individual templates:
 * baseDir -- see baseDir
 *  manifest -- see manifest
 *  versioned -- is the URL for the updated tarball. Bypassed by manifest's `.gz` field.
