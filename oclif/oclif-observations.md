@@ -197,7 +197,7 @@ is cheches in maany places:
 ```
 {
       version: "${VERSION_UPDATE_TO}"
-      gz: "http://127.0.0.1:8080/public/xxxxx-v${VERSION_UPDATE_TO}/flash-v${VERSION_UPDATE_TO}-darwin-x64.tar.gz"
+      gz: "http://127.0.0.1:8080/public/xxxxx-v${VERSION_UPDATE_TO}/xxxxx-v${VERSION_UPDATE_TO}-darwin-x64.tar.gz"
       baseDir: "xxxxx"
       sha256gz: "$(cat ....tar.gz | openssl dgst -sha256)"
 }
