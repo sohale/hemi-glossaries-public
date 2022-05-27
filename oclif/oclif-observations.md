@@ -63,6 +63,7 @@ Which places can contain manifest?
   * actual update
 
 [Invariance]: this.config.version === manifest.version
+* See channel. (read from contents of manifest)
 
 ### scoped Vars
 * How to set scoped vars?
@@ -80,7 +81,22 @@ Which places can contain manifest?
 
 ### Other minor concepts
 #### channel
+Channel is a feature of (a potential?) update.
+
 `this.channel`. Usually = `stable`
+
+The channel field is (often) read from the manifest contents.
+"channel": "stable",
+
+But it can be 
+  * The `channel` of update is from the manifest:  `manifest.channel`. Is read from contents of manifest.
+  * Can be the argument of update command: `xxxxx update stable`
+  * Where is it read when "check for update" (`warn-if-update-available`)
+
+Values of channel
+* `stable`
+* ...
+
 #### tidy, touch
 what does it do? `this.tidy();`
 
@@ -94,8 +110,7 @@ The `config` & The `pjson`
   * `config.binPath` -- If undefined, it does skipUpdate => `'not updatable'`. How is it set?
   * `this.config.version` The "from" version: Updating CLI from `this.config.version` to `manifest.{version, channel}`
   * `this.config.name` is the application name, here: `xxxxx`
-  * The `channel` of update is from the manifest:  `manifest.channel`
-
+  * The `channel` of update is from the manifest:  `manifest.channel`. See section for channel
 * The `pjson` fields
 
 ### local cache
@@ -176,7 +191,7 @@ The reexec, spawns the `xxxxx update` after the bash script is created (using `c
 
 
 ### Is update needed?
-is cheches in maany places:
+is checks in many places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
 
