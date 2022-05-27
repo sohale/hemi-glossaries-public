@@ -92,7 +92,9 @@ what does it do? `this.tidy();`
 The `config` & The `pjson`
 * The config fields
   * `config.binPath` -- If undefined, it does skipUpdate => `'not updatable'`. How is it set?
-  * `this.config.version` Updating CLI from `this.config.version` to `manifest.(version, channel)`
+  * `this.config.version` The "from" version: Updating CLI from `this.config.version` to `manifest.{version, channel}`
+  * `this.config.name` is the application name, here: `xxxxx`
+  * The `channel` of update is from the manifest:  `manifest.channel`
 
 * The `pjson` fields
 
@@ -231,7 +233,7 @@ tmp
 │
 ├── cache
 │   ├── 12.22.12 / SHASUMS256.txt.asc
-│   ├── node-v12.22.12-darwin-x64
+│   ├── node-v12.22.12-darwin-x64             ?
 │   ├── node-v12.22.12-linux-armv7l
 │   ├── node-v12.22.12-linux-x64
 │   ├── node-v12.22.12-win32-x64.exe
