@@ -264,6 +264,9 @@ dist
 │   ├── xxxxx-v6.0.7-win32-x64.tar.gz
 │   ├── xxxxx-v6.0.7-win32-x86.tar.gz
 │   └── xxxxx-v6.0.7.tar.gz
+│
+│        /* manifest files: */
+│
 ├── darwin-x64
 ├── linux-arm
 ├── linux-x64
