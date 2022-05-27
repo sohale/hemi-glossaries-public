@@ -196,19 +196,14 @@ is checks in many places:
 * ...
 
 ## Requirements for update
-* In `package.json`
+* In `package.json` (use jq)
 ```
-       .version = \"$FLVER\"
-       |
-       .oclif.npmRegistry = \"http://127.0.0.1:3000/oclifRegistry\"
-       |
-       .oclif.update.s3.host = \"http://127.0.0.1:3000/upd\"
-       |
-       .oclif[\"warn-if-update-available\"].timeoutInDays = -1
-       |
-       .oclif[\"warn-if-update-available\"].registry = \"http://127.0.0.1:3000/wiua\"
-       |
-       .engines.node = \">=8.16.0\"
+       .version = "6.0.7"
+       .oclif.npmRegistry = "http://127.0.0.1:3000/oclifRegistry"
+       .oclif.update.s3.host = "http://127.0.0.1:3000/upd"
+       .oclif["warn-if-update-available"].timeoutInDays = -1
+       .oclif["warn-if-update-available"].registry = "http://127.0.0.1:3000/wiua"
+       .engines.node = ">=8.16.0"
 ```
 * A manifest file, usually called `darwin-x64`:
 ```
