@@ -131,7 +131,7 @@ where `XXXXX` is the name of your command.
 
 * The bash file is usually in `~/.local/share/xxxxx/client/bin/xxxxx` (.clientBin)
 * `~/.local/share/xxxxx/client/current` (.clientRoot + '/current')
-
+* Aa symbolic link `~/.local/share/xxxxx/client/current` points to ->   `./9.0.0`
 #### Bash script
 See [The createBin](#createBin)
 
