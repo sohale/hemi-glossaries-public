@@ -3,6 +3,8 @@ Including OCLIF internls
 
 https://github.com/oclif/oclif
 
+Note: `XXXXX` and `xxxxx` are the names of your command.
+
 ## Main concepts:
 ### plugins
 There are three types of plugins
@@ -65,16 +67,16 @@ Which places can contain manifest?
 ### scoped Vars
 * How to set scoped vars?
 * What are some scoped vars?
-  * `FLASH_UPDATE_INSTRUCTIONS` -- Used at onset of update. ...
+  * `XXXXX_UPDATE_INSTRUCTIONS` -- Used at onset of update. ...
 
-  * `FLASH_CACHE_DIR`
-  * `FLASH_CONFIG_DIR`
-  * `FLASH_DATA_DIR`
-  * `FLASH_BINPATH`
-  * `FLASH_NPM_REGISTRY`
-  * `FLASH_S3_BUCKET`
-  * `FLASH_OCLIF_CLIENT_HOME`
-  * `FLASH_UPDATE_INSTRUCTIONS`
+  * `XXXXX_CACHE_DIR`
+  * `XXXXX_CONFIG_DIR`
+  * `XXXXX_DATA_DIR`
+  * `XXXXX_BINPATH`
+  * `XXXXX_NPM_REGISTRY`
+  * `XXXXX_S3_BUCKET`
+  * `XXXXX_OCLIF_CLIENT_HOME`
+  * `XXXXX_UPDATE_INSTRUCTIONS`
 
 ### Other minor concepts
 #### channel
@@ -96,12 +98,12 @@ The `config` & The `pjson`
 
 ### local cache
 * The `.local/share` is used for what?
-   * `~/.local/share/flash/client/6.0.7` is the output of update fter downloading.
+   * `~/.local/share/xxxxx/client/6.0.7` is the output of update fter downloading.
 
 ### client dir
-* The clientDir or `clientRoot` is `~/.local/share/flash/client`.
+* The clientDir or `clientRoot` is `~/.local/share/xxxxx/client`.
 * It is cleaned (wiped) before an update. (by `ensureClientDir()`)
-* Output of the extraction stream is `.clientRoot`/`maifest.version` for example `~/.local/share/flash/client/6.0.7`
+* Output of the extraction stream is `.clientRoot`/`maifest.version` for example `~/.local/share/xxxxx/client/6.0.7`
 
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
@@ -109,25 +111,40 @@ The `config` & The `pjson`
 * Streams can be redirected to `extract()`.
 * You can `await` the downstream that you attached (eg the `extract`).
 
+### update instructions
+Should be set in env variable `XXXXX_UPDATE_INSTRUCTIONS`.
 
-#### The createBin
+### more minor
+#### createBin
 `this.createBin(version);` does what?
 `version` is the update-to (read from manifest)
 
-#### The `baseDir`
+The createBin creates a bash file for the new version (updated).
+The reason for bash script is to set env varibles so tht it can run sa reexec.
+(Why reexec reinstalls?)
+That includes `XXXXX_BINPATH`, etc.
+where `XXXXX` is the name of your command.
+
+#### Bash script
+See [The createBin](#createBin)
+
+#### Templates
+See [Templates](#templates-1)
+
+### The `baseDir`
 * `baseDir` aka `basename`
 * Used during extraction.
 
-#### s3Key
+### s3Key
 The `this.config.s3Key()` provides importanat key ids where info is taken fromm `this`, and customised (from manifest, etc)
 * `.s3Key('baseDir')` provides the baseDir.  Is overriden by `manifest`.baseDir (directly ready as a field from fetched manifest file).
 If not in manifest file, it is reconstructed form other fields of manifest such as: (`.version`, `.channel`) (and bin(why?)platform,arch).
 * In generaal, its intpus are: `type` ( = the main `key`), then from the goven object: `.platform`, the templtes['target'][key].
 * See templates
 * s3Key(key) uses the template from the given key: templates[key].
+### reexec
+The reexec, spawns the `xxxxx update` after the bash script is created (using `createBin()`).
 
-#### Templates
-See [Templates](#templates-1)
 ## Templates
 * Templtes is a set of templates (strings)
 * Can be customised in package.json: ...`.s3.templates`
