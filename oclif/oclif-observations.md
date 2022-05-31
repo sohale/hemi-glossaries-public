@@ -303,3 +303,7 @@ dist
 * `.tar.gz`  -- for node
 
 ### File structure created by installer (linux)
+
+## Readme
+Readme can be generated using `oclif-dev readme` in the folder.
+It also seeks the["warn-if-update-available"].registry URL on server wiua/xxxxx
