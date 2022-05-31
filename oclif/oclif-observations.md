@@ -307,3 +307,5 @@ dist
 ## Readme
 Readme can be generated using `oclif-dev readme` in the folder.
 It also seeks the["warn-if-update-available"].registry URL on server wiua/xxxxx
+The `README.md` should contian   `<!-- usage -->` and `<!-- commands -->` oethrwise nothing is generated.
+See [doc1](https://github.com/oclif/dev-cli/blob/main/README.md#oclif-dev-readme) and [doc2](https://github.com/oclif/dev-cli/blob/47fb493c523bd417d39cb83aecd4aac1c6bb505b/src/commands/readme.ts#L19).
