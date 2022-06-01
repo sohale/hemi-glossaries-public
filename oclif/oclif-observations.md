@@ -119,16 +119,33 @@ The `config` & The `pjson`
 * The `pjson` fields
 
 ### local cache
+(not to be confused with client dir; `.local/share`. see [client dir])
+
+Confusion resolution: There are two cache locaitons.
+* `~/Library/Caches/xxxxx`
+* `~/.local/share/xxxxx`
+They are of differnt worlds. They are refered to by
+* `this.config.cacheDir
+* `this.clientBin`
+eg
+* `~/Library/Caches/xxxxx` ( this.config.cacheDir)
+* `~/.local/share/xxxxx/client/bin/xxxxx` (this.clientBin)
+
+see [client dir]
 ie aka `.cacheDir`
-* The `.local/share` is used for what?
-   * `~/.local/share/xxxxx/client/6.0.7` is the output of update fter downloading.
 * For the actual folder referred to by `.cacheDir`, [see `config/cacheDir` docs](https://oclif.io/docs/config).
 * On MacOS Also `~/Library/Caches/xxxxx/` subdirectory is used
    * "The version file": `~/Library/Caches/xxxxx/version`.
       * example content `{"current":"6.0.7","authorization":""}`
       * Its timestamp matters. (for check if update is available. See `pjson.oclif.['warn-if-update-available'].timeoutInDays`
 * The folder is from `config.cacheDir`. Example value: ``~/Library/Caches/xxxxx/` (?)
+
 ### client dir
+* The `.local/share` is used for what?
+   * `~/.local/share/xxxxx/client/6.0.7` is the output of update fter downloading.
+
+Guess: Is it usaed for installation by installer?
+
 * The clientDir or `clientRoot` is `~/.local/share/xxxxx/client`.
 * It is cleaned (wiped) before an update. (by `ensureClientDir()`)
 * Output of the extraction stream is `.clientRoot`/`maifest.version` for example `~/.local/share/xxxxx/client/6.0.7`
