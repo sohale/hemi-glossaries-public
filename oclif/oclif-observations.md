@@ -42,6 +42,9 @@ What is a hook?
   6. done.
   7. if command not found: `command_not_found`
 
+* Every hook receives a `{config}`. confignaalso contains current package.json (as a subfield `.pjson`). eg the `update/init` hook
+* Many times, hooks `spawn()`. the spawned ones may `process.exit()`. But not the hook itself. eg the `update/init` hook
+
 ### init hook
 * The `init` hook kof the `update` plugin,  Sets important config/values:
    * `binPath` -- ? `this.config.binPath || this.config.bin;`
@@ -51,7 +54,9 @@ What is a hook?
    * `clientRoot` -- (See below)
    * `autoupdateEnv` no idea.
    * `clientDir` -- ... (bsed no `clientRoot` and current version = config.version )
-   * 
+
+(Has `{config}`)
+
 ### Manifest
 Which places can contain manifest?
 
