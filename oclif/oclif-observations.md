@@ -158,6 +158,24 @@ See [local cache]
 * You can `await` the downstream that you attached (eg the `extract`).
 
 ### update instructions
+* update instrucitons need ot be set in `package.json`:
+```bash
+# Avoid `"` here (for now):
+cat <<UPDATE_INSTRUCTIONS  > "$E2ETEMP/temp-update-instructions.txt"
+************
+   To update xxxxx-cli, run the following commands:
+        flash update
+        flash update stable
+   Update available for <%= chalk.redBright(config.name) %> from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.
+************
+UPDATE_INSTRUCTIONS
+
+jq "
+       .oclif[\"warn-if-update-available\"].message = \"$(cat temp-update-instructions.txt)\"
+   "  package.json > temp-package.json
+cp temp-package.json package.json
+```
+The following is incorrect! This is only when update command is done. which in fact we dont need it. 
 * Should be set in env variable `XXXXX_UPDATE_INSTRUCTIONS`.
 * See "warn if update avaipable"
 * You can use the templte format used in underscore library: `_.template`.
