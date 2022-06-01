@@ -119,6 +119,7 @@ The `config` & The `pjson`
 * The `pjson` fields
 
 ### local cache
+ie aka `.cacheDir`
 * The `.local/share` is used for what?
    * `~/.local/share/xxxxx/client/6.0.7` is the output of update fter downloading.
 * On MacOS Also `~/Library/Caches/xxxxx/` subdirectory is used
@@ -130,7 +131,8 @@ The `config` & The `pjson`
 * The clientDir or `clientRoot` is `~/.local/share/xxxxx/client`.
 * It is cleaned (wiped) before an update. (by `ensureClientDir()`)
 * Output of the extraction stream is `.clientRoot`/`maifest.version` for example `~/.local/share/xxxxx/client/6.0.7`
-
+### cacheDir
+See [local cache]
 ### Stream
 * It uses `stream` for downloading the update. Not promises, etc.
 * Strems can be `pause()`ed or `stream.resume()`ed from downstream. (downstrem controls the dataflow)
