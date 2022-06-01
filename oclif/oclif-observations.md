@@ -388,3 +388,8 @@ You can run it using `node_modules/@oclif/dev-cli/bin/run`
 
 ## "Warn if update aviallable"
 See above
+
+## tips about debugging and dev using oclif-update:
+* Set this `stdio: 'ignore'`, to `stdio: 'inherit',` in [check-update.ts](https://github.com/oclif/plugin-warn-if-update-available/blob/75754b9b468e5b239f323adea2517595a7adc4b9/src/hooks/init/check-update.ts#L64) (but the  .js version)
+* The web server needs to return json encoding `application/json; charset=utf-8` for URL: (`pjson.oclif.['warn-if-update-available'].registry`) `/` `xxxx`. (Or manually, `JSON.parse()` in `node_modules/@oclif/plugin-update/lib/commands/update.js`)
+* Use `this.debug()` (eg in `update.js` (`plugin-update/lib/commands/update.js`) ) or `debug()` (in hooks/init/check-update.js). Otherwise the output will be lost.
