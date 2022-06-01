@@ -122,6 +122,7 @@ The `config` & The `pjson`
 ie aka `.cacheDir`
 * The `.local/share` is used for what?
    * `~/.local/share/xxxxx/client/6.0.7` is the output of update fter downloading.
+* For the actual folder referred to by `.cacheDir`, [see `config/cacheDir` docs](https://oclif.io/docs/config).
 * On MacOS Also `~/Library/Caches/xxxxx/` subdirectory is used
    * "The version file": `~/Library/Caches/xxxxx/version`.
       * example content `{"current":"6.0.7","authorization":""}`
