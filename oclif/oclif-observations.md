@@ -161,17 +161,17 @@ See [local cache]
 * update instrucitons need ot be set in `package.json`:
 ```bash
 # Avoid `"` here (for now):
-cat <<UPDATE_INSTRUCTIONS  > "$E2ETEMP/temp-update-instructions.txt"
+cat <<UPDATE_INSTRUCTIONS  > "./temp-update-instructions.txt"
 ************
    To update xxxxx-cli, run the following commands:
-        flash update
-        flash update stable
+        xxxxx update
+        xxxxx update stable
    Update available for <%= chalk.redBright(config.name) %> from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.
 ************
 UPDATE_INSTRUCTIONS
 
 jq "
-       .oclif[\"warn-if-update-available\"].message = \"$(cat temp-update-instructions.txt)\"
+       .oclif[\"warn-if-update-available\"].message = \"$(cat ./temp-update-instructions.txt)\"
    "  package.json > temp-package.json
 cp temp-package.json package.json
 ```
