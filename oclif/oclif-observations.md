@@ -143,9 +143,15 @@ The `config` & The `pjson`
 * You can use the templte format used in underscore library: `_.template`.
    * Available data/functions are: `chalk()`, `config`. you can use `chalk` and `config` in it. and the subfields of `distTags`. See [distTags] section.
 
-### dist-tag format
-* ...
-* 
+### dist-tag (distTag) format
+* dist-tag (seems to contain):
+    * `.latest`
+    * ...
+    * can have more fields
+* Is read /written to/from:
+   * URL (pjson.oclif.[\"warn-if-update-available\"].registry). The exact URL=?
+   * The "cache/version" file
+### The "cache/version" file 
 ### more minor
 #### createBin and the bash script
 `this.createBin(version);` does what?
