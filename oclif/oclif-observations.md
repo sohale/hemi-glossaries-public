@@ -138,8 +138,14 @@ The `config` & The `pjson`
 * You can `await` the downstream that you attached (eg the `extract`).
 
 ### update instructions
-Should be set in env variable `XXXXX_UPDATE_INSTRUCTIONS`.
+* Should be set in env variable `XXXXX_UPDATE_INSTRUCTIONS`.
+* See "warn if update avaipable"
+* You can use the templte format used in underscore library: `_.template`.
+   * Available data/functions are: `chalk()`, `config`. you can use `chalk` and `config` in it. and the subfields of `distTags`. See [distTags] section.
 
+### dist-tag format
+* ...
+* 
 ### more minor
 #### createBin and the bash script
 `this.createBin(version);` does what?
@@ -209,7 +215,23 @@ The reexec, spawns the `xxxxx update` after the bash script is created (using `c
 is checks in many places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
-* See below section.
+#### "Warn if update aviallable"
+
+* The contents and the timestamp of this matter
+* This matters `pjson.oclif.['warn-if-update-available'].timeoutInDays` (with tht file s timestamp)
+* The `[tags]` of the URL matter.
+* The URL is `pjson.oclif.['warn-if-update-available'].registry`
+* Data sources:
+   * From pjson: ( `pjson.oclif.['warn-if-update-available']` )
+      * `.timeoutInDays`
+      * `.registry`
+   * On MacOS Also `~/Library/Caches/xxxxx/` subdirectory is used (From `config.cacheDir` folder)
+   * "The version file": `~/Library/Caches/xxxxx/version`.
+      * example content `{"current":"6.0.7","authorization":""}`
+      * Its timestamp matters. (for check if update is available. See `pjson.oclif.['warn-if-update-available'].timeoutInDays`
+* The folder is from `config.cacheDir`. Example value: ``~/Library/Caches/xxxxx/` (?)
+
+* See updage instrucitons above.
 
 ### Requirements for update
 * In `package.json` (use jq)
@@ -330,16 +352,4 @@ The manifest files created by `oclif-dev  pack` are different.
 You can run it using `node_modules/@oclif/dev-cli/bin/run`
 
 ## "Warn if update aviallable"
-* The contents and the timestamp of this matter
-* This matters `pjson.oclif.['warn-if-update-available'].timeoutInDays` (with tht file s timestamp)
-* The `[tags]` of the URL matter.
-* The URL is `pjson.oclif.['warn-if-update-available'].registry`
-* Data sources:
-   * From pjson: ( `pjson.oclif.['warn-if-update-available']` )
-      * `.timeoutInDays`
-      * `.registry`
-   * On MacOS Also `~/Library/Caches/xxxxx/` subdirectory is used (From `config.cacheDir` folder)
-   * "The version file": `~/Library/Caches/xxxxx/version`.
-      * example content `{"current":"6.0.7","authorization":""}`
-      * Its timestamp matters. (for check if update is available. See `pjson.oclif.['warn-if-update-available'].timeoutInDays`
-* The folder is from `config.cacheDir`. Example value: ``~/Library/Caches/xxxxx/` (?)
+See above
