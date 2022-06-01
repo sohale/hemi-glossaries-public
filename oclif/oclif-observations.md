@@ -221,12 +221,16 @@ The reexec, spawns the `xxxxx update` after the bash script is created (using `c
 is checks in many places:
 * The plugin-update / init hook: -- `autoupdateNeeded()` ius called plugins/update/hook/inside init.
 * ...
-#### "Warn if update aviallable"
+#### "Warn if update available"
 
 * The contents and the timestamp of this matter
 * This matters `pjson.oclif.['warn-if-update-available'].timeoutInDays` (with tht file s timestamp)
 * The `[tags]` of the URL matter.
 * The URL is `pjson.oclif.['warn-if-update-available'].registry`
+   * The exact URL is `.registry`/`xxxxx`/`? [see.](https://github.com/oclif/plugin-warn-if-update-available/blob/main/src/get-version.ts#L8)
+   * From contents of body, the body`['dist-tags']` is read and populted. What are he contents? See seciton `dist-tags`.
+   * and rewritten. (and refreshed. but why touched before seeking the URL?)
+   * The 'name' (xxxx) is `%f` ed.
 * Data sources:
    * From pjson: ( `pjson.oclif.['warn-if-update-available']` )
       * `.timeoutInDays`
@@ -237,7 +241,9 @@ is checks in many places:
       * Its timestamp matters. (for check if update is available. See `pjson.oclif.['warn-if-update-available'].timeoutInDays`
 * The folder is from `config.cacheDir`. Example value: ``~/Library/Caches/xxxxx/` (?)
 
-* See updage instrucitons above.
+* It is not executed at actual update.
+
+* See updage instructions above. (The `message` field, ie "update instructions template")
 
 ### Requirements for update
 * In `package.json` (use jq)
@@ -249,6 +255,7 @@ is checks in many places:
        .oclif["warn-if-update-available"].registry = "http://127.0.0.1:3000/wiua"
        .engines.node = ">=8.16.0"
 ```
+* Note: I think `"http://127.0.0.1:3000/wiua"` is only used for checking the remote "dist-tag" (from url+`/xxxxx`). See `dist-tag`.
 * A manifest file, usually called `darwin-x64`:
 ```
 {
@@ -261,6 +268,8 @@ is checks in many places:
 }
 ```
 * Manifest file to be served in the URL specified by `package.json` `.oclif.update.s3.host` (?). e.g. `http://127.0.0.1:3000/upd/darwin-x64`
+
+* version file? (for `warn-if-update-available` only)
 
 ## File structure
 ### File structure created by oclif-dev
